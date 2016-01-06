@@ -1,0 +1,37 @@
+{
+  "name": "doula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveszc/doula.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steveszc/doula/issues"
+  },
+  "homepage": "https://github.com/steveszc/doula#readme",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-plugin-object-assign": "^1.2.1",
+    "babel-plugin-react-display-name": "^2.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.1.18",
+    "babel-plugin-transform-react-display-name": "^6.0.14",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babelify": "^7.2.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-html-replace": "^1.5.4",
+    "gulp-uglify": "^1.4.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  }
+}
