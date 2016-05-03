@@ -1,1 +1,1 @@
-console.log('js works');
+console && console.log('js works');

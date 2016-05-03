@@ -82,8 +82,9 @@ gulp.task('public', function() {
 
 gulp.task('build',['html','scss','lint','js', 'public']);
 
-gulp.task('dev', ['html', 'css'], function() {
+gulp.task('dev', ['html', 'scss'], function() {
     gulp.watch(path.src.html, ['html']);
+    gulp.watch(path.src.scss, ['scss']);
     gulp.watch(path.src.js, ['lint']);
 
     console.log('Watching and waiting...');

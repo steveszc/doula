@@ -1,5 +1,115 @@
 $blue: #007fae;
+$orange: orange;
+$not-black: #1F1F26;
+$dark-gray: #585858;
 
 html {
+    font-size: 1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $not-black;
+    font-size: 100%;
+    margin: 0;
+    padding: 0 0 2em 0;
+    min-height: 100vh;
+    border-bottom: 25px solid $orange;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    font-family: 'Ovo', serif;
+}
+
+a {
     color: $blue;
+
+}
+
+.hero {
+    width: 100%;
+    margin: 0 auto 2em;
+    padding: .5em .5em .5em .5em;
+    background-color: #454545;
+    @media (min-width: 600px) {
+        border-left: none;
+        background-color: #fff;
+        text-align: center;
+        max-width: 600px;
+    }
+}
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: left;
+    float: left;
+    @media (min-width: 600px) {
+        text-align: center;
+        float: none;
+        font-size: 3.5em;
+        color: $dark-gray;
+    }
+
+    margin: 0;
+    padding: 0;
+    .courageously {
+        font-family: 'Ovo', serif;
+        font-size: 1.125em;
+    }
+    .born {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+}
+.tagline {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+
+    text-align: right;
+    font-size: .75em;
+    line-height: 3em;
+    color: #fff;
+    @media (min-width: 600px) {
+        text-align: center;
+        font-size: 1em;
+        color: $dark-gray;
+    }
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: 600px) {
+        max-width: 600px;
+    }
+
+    * + * {
+        margin-top: 1em;
+    }
+}
+
+blockquote {
+    background-color: lighten($orange, 30);
+    border-left: 15px solid $orange;
+    color: $dark-gray;
+    padding: 1em;
+}
+
+.list-of-links {
+    list-style-type: none;
+    * + * {
+        margin-top: .25em;
+    }
 }
