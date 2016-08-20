@@ -5,7 +5,7 @@ $dark-gray: #585858;
 
 html {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.625;
     box-sizing: border-box;
 }
 
@@ -96,6 +96,10 @@ a {
     }
 
     * + * {
+        margin-top: 1.5em;
+    }
+
+    p + p {
         margin-top: 1em;
     }
 }
@@ -105,6 +109,21 @@ blockquote {
     border-left: 15px solid $orange;
     color: $dark-gray;
     padding: 1em;
+}
+
+.headshot {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border: 8px solid #f4f4f4;
+    border-radius: 8px;
+
+    @media (min-width: 600px) {
+        float: right;
+        margin: 0 0 0 1em;
+    }
 }
 
 .list-of-links {

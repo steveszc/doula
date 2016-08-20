@@ -1,6 +1,6 @@
 html {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.625;
   box-sizing: border-box; }
 
 *, *:before, *:after {
@@ -79,6 +79,8 @@ a {
     .content {
       max-width: 600px; } }
   .content * + * {
+    margin-top: 1.5em; }
+  .content p + p {
     margin-top: 1em; }
 
 blockquote {
@@ -86,6 +88,19 @@ blockquote {
   border-left: 15px solid orange;
   color: #585858;
   padding: 1em; }
+
+.headshot {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border: 8px solid #f4f4f4;
+  border-radius: 8px; }
+  @media (min-width: 600px) {
+    .headshot {
+      float: right;
+      margin: 0 0 0 1em; } }
 
 .list-of-links {
   list-style-type: none; }
