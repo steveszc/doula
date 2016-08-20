@@ -17,6 +17,7 @@ var path = {
             html: './src/html/pages/*.html',
             includes: 'src/html/includes/',
             scss: './src/scss/manifest.scss',
+            img: './src/img/*',
             js  : './src/js/**/*',
             entry: './src/js/app.js',
             public: './src/public/*'
@@ -25,6 +26,7 @@ var path = {
             html: './docs',
             css: './docs/css',
             js  : './docs/js',
+            img: './docs/img',
             public: './docs'
         },
         file: {
@@ -53,6 +55,11 @@ gulp.task('scss', function() {
     //.pipe(reload({stream:true}))
 ;});
 
+gulp.task('img', function() {
+    return gulp.src(path.src.img)
+    .pipe(gulp.dest(path.dist.img))
+});
+
 gulp.task('lint', function() {
     return gulp.src(path.src.js)
     .pipe(eslint())
@@ -80,7 +87,7 @@ gulp.task('public', function() {
     .pipe(gulp.dest(path.dist.public))
 ;});
 
-gulp.task('build',['html','scss','lint','js', 'public']);
+gulp.task('build',['html','scss','img','lint','js', 'public']);
 
 gulp.task('dev', ['html', 'scss'], function() {
     gulp.watch(path.src.html, ['html']);
