@@ -19,13 +19,13 @@ var path = {
             scss: './src/scss/manifest.scss',
             js  : './src/js/**/*',
             entry: './src/js/app.js',
-            public: './src/public'
+            public: './src/public/*'
         },
         dist: {
-            html: './dist',
-            css: './dist/css',
-            js  : './dist/js',
-            public: '.dist/public'
+            html: './docs',
+            css: './docs/css',
+            js  : './docs/js',
+            public: './docs'
         },
         file: {
             app: {
@@ -46,10 +46,10 @@ gulp.task('scss', function() {
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer({browser: ['> 1%', 'last 2 versions']}))
     .pipe(rename({basename: 'main'}))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest(path.dist.css))
     .pipe(minifycss())
     .pipe(rename({basename: 'main', suffix: '.min'}))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest(path.dist.css))
     //.pipe(reload({stream:true}))
 ;});
 
